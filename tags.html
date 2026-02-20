@@ -3,39 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <nav>
-        <h3>Navigation</h3>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="profile.html">Profile</a></li>
-        </ul>
-    <header>
-        <h1>Tags Page</h1>
-    </header>
-    <main>
-        <div>
-            <h4>Here are some web development technologies:</h4>
-            <ul>
-                <li>
-                    <h4>HTML</h4>
-                    <p>HTML stands for HyperText Markup Language.<br/> This page uses this technology.</p>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">WebClass</a>
+            <ul class="navbar-nav ms-auto flex-row gap-2">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                <li class="nav-item"><a class="nav-link active" href="tags.html">Tags</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container main-container">
+        <div class="card p-4 shadow-sm">
+            <h1 class="h3 mb-3">Tags Page</h1>
+            <h4 class="mb-3">Here are some web development technologies:</h4>
+
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h5>HTML</h5>
+                    <p class="mb-0">HTML stands for HyperText Markup Language. This page uses this technology.</p>
                 </li>
-                <li>
-                    <h4>CSS</h4>
-                    <p>CSS stands for Cascading Style Sheets. </p>
+                <li class="list-group-item">
+                    <h5>CSS</h5>
+                    <p class="mb-0">CSS stands for Cascading Style Sheets.</p>
                 </li>
-                <li>
-                    <h4>JavaScript</h4>
-                    <p>JavaScript is a programming language that enables interactive web pages. </p>
+                <li class="list-group-item">
+                    <h5>JavaScript</h5>
+                    <p class="mb-0">JavaScript is a programming language that enables interactive web pages.</p>
                 </li>
             </ul>
         </div>
-        <div>
-        
-        </div>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
