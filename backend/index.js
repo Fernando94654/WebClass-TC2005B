@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
 const dotenv = require("dotenv");
+const { initDb } = require("./src/config/db");
 
 const basicRoutes = require("./src/routes/basicRoutes");
 const userRoutes = require("./src/routes/userRoutes");
@@ -20,6 +21,16 @@ app.use("/", basicRoutes);
 app.use("/users", userRoutes);
 app.use("/login", authRoutes);
 
-app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
-});
+const startServer = async () => {
+  try {
+    await initDb();
+    app.listen(PORT, () => {
+      console.log(`Servidor corriendo en http://localhost:${PORT}`);
+    });
+  } catch (error) {
+    console.error("Error al iniciar la aplicacion:", error.message);
+    process.exit(1);
+  }
+};
+
+startServer();
